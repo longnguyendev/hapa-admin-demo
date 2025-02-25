@@ -61,6 +61,15 @@ const theme = createTheme({
         },
       },
     },
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          th: {
+            fontWeight: 600,
+          },
+        },
+      },
+    },
   },
 });
 

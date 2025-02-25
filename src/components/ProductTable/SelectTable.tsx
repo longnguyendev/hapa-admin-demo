@@ -421,7 +421,7 @@ function Row(props: {
         selected={isItemSelected}
         sx={{ cursor: 'pointer', backgroundColor: open ? '#F0F9FE' : '#fff' }}
       >
-        <TableCell padding="checkbox">
+        <TableCell padding="checkbox" align="center">
           <IconButton
             aria-label="expand row"
             size="small"

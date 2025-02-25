@@ -1,7 +1,9 @@
-import { Box, Stack } from '@mui/material';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Box, IconButton, Stack } from '@mui/material';
 
 import { NavItem } from '@/types';
 
+import { Flex } from '../Flex';
 import { Logo } from '../Logo';
 import Scrollbar from '../Scrollbar/scrollbar';
 import { NavItem as Item } from './NavItem';
@@ -72,7 +74,17 @@ export function Menu() {
         },
       }}
     >
-      <Logo sx={{ mt: 3, ml: 4 }} />
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        sx={{ mt: '18px', mx: '10px' }}
+      >
+        <Logo />
+        <IconButton>
+          <MoreVertIcon sx={{ color: 'white' }} />
+        </IconButton>
+      </Flex>
+
       <Stack component="nav" spacing={0.5} sx={{ mt: '30px', px: '10px' }}>
         {navItems.map((item) => (
           <Item key={item.title} item={item} />
